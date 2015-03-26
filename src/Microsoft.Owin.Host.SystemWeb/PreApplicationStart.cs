@@ -30,7 +30,7 @@ namespace Microsoft.Owin.Host.SystemWeb
             {
                 if (OwinBuilder.IsAutomaticAppStartupEnabled)
                 {
-                    HttpApplication.RegisterModule(typeof(OwinHttpModule));
+                    Web.Infrastructure.DynamicModuleHelper.DynamicModuleUtility.RegisterModule(typeof(OwinHttpModule));
                 }
             }
             catch (Exception ex)
